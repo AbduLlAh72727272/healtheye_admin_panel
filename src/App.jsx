@@ -1555,6 +1555,11 @@ const STYLES = `
         border-radius: 10px;
         position: relative;
         transition: transform 0.3s, box-shadow 0.3s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 140px;
+        overflow: hidden;
     }
     
     .stat-card:hover {
@@ -1565,17 +1570,27 @@ const STYLES = `
     .stat-card h3 {
         font-size: 1rem;
         color: var(--secondary-text);
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
+        margin-top: 0;
+        line-height: 1.3;
     }
 
     .stat-card .stat-value {
         font-family: var(--font-primary);
-        font-size: 2.5rem;
+        font-size: 2rem;
         color: var(--primary-text);
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        line-height: 1.2;
+        margin: 0.5rem 0;
+        max-width: 100%;
+        display: block;
     }
     
     .stat-card .stat-change {
         font-size: 0.9rem;
+        margin-top: auto;
+        padding-top: 0.5rem;
     }
     .stat-card .stat-change.positive { color: var(--positive-color); }
     .stat-card .stat-change.negative { color: var(--danger-color); }
