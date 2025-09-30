@@ -436,7 +436,7 @@ const UserManagementScreen = () => {
     const { users, loading, error, updateUser } = useUsers();
     const [editingUser, setEditingUser] = useState(null);
     const [editFormData, setEditFormData] = useState({});
-    const headers = ['Display Name', 'Email', 'Role', 'Admin Status', 'Active Status'];
+    const headers = ['Display Name', 'Email', 'Role', 'Admin Status', 'Status'];
 
     const handleAction = async (action, id) => {
         console.log(`Action: ${action} on user ID: ${id}`);
