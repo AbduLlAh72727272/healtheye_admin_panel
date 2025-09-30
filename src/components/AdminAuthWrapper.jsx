@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { onAdminAuthStateChanged, adminLogin, adminLogout, resetAdminPassword, getSuperAdminCredentials } from '../firebase/adminAuth.js';
+import logo from '../assets/logo.png';
 
 // Advanced Admin Login Component
 const AdminLogin = ({ onLogin }) => {
@@ -132,7 +133,7 @@ const AdminLogin = ({ onLogin }) => {
         <div className="login-card">
           <div className="login-header">
             <div className="logo-container">
-              <div className="logo-icon">👁️‍🗨️</div>
+              <img src={logo} alt="HealthEye Logo" className="logo-icon" />
               <h2>HealthEye Admin</h2>
             </div>
             <p>Secure access to your admin dashboard</p>
@@ -415,9 +416,12 @@ const AdminLogin = ({ onLogin }) => {
         }
         
         .logo-icon {
-          font-size: 2.5rem;
+          width: 60px;
+          height: 60px;
+          object-fit: contain;
           filter: drop-shadow(0 0 10px rgba(0, 170, 255, 0.5));
           animation: pulse 3s infinite;
+          border-radius: 8px;
         }
         
         @keyframes pulse {
